@@ -12,12 +12,11 @@
         :src="$withBase($site.themeConfig.logo)"
         :alt="$siteTitle"
       >
-      <span
-        ref="siteName"
-        class="site-name"
-        v-if="$siteTitle"
-        :class="{ 'can-hide': $site.themeConfig.logo }"
-      >{{ $siteTitle }}</span>
+      <div class="logo">
+        <h1 class="site-name" v-if="$siteTitle">
+          <span v-for="letter in $siteTitle">{{ letter }}</span>
+        </h1>
+      </div>
     </router-link>
 
     <div
@@ -95,18 +94,6 @@ $navbar-horizontal-padding = 1.5rem
   padding $navbar-vertical-padding $navbar-horizontal-padding
   line-height $navbarHeight - 1.4rem
   position relative
-  a, span, img
-    display inline-block
-  .logo
-    height $navbarHeight - 1.4rem
-    min-width $navbarHeight - 1.4rem
-    margin-right 0.8rem
-    vertical-align top
-  .site-name
-    font-size 1.3rem
-    font-weight 600
-    color $textColor
-    position relative
   .links
     padding-left 1.5rem
     box-sizing border-box
@@ -130,4 +117,75 @@ $navbar-horizontal-padding = 1.5rem
       display none
     .links
       padding-left 1.5rem
+</style>
+<style lang="scss">
+  $brand1: #084C61;
+  $light: hsla(75%, 90%, 92%, 1);
+  $grey: #121619;
+  $brand2: hsla(37%, 100%, 88%, 1);
+  $logo: #E58F65;
+
+  @import url('https://fonts.googleapis.com/css?family=DM+Serif+Text|Karla:400,700&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,600&display=swap');
+  @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&display=swap');
+
+  .logo {
+    grid-area: logo;
+    width: 100px;
+    height: 100px;
+    .site-name {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-template-rows: repeat(4,1fr);
+      color: $brand1;
+      border-radius: 100%;
+      border: 5px solid $brand1;
+      background: $light;
+      width: 100%;
+      height:100%;
+      text-align:center;
+      transform: rotate(-45deg);
+      font-size: 16px;
+      span:nth-child(1) {
+        grid-column: 2;
+        grid-row: 1;
+      }
+      span:nth-child(2) {
+        grid-column: 3;
+        grid-row: 1;
+      }
+      span:nth-child(3) {
+        grid-column: 3;
+        grid-row: 2;
+      }
+      span:nth-child(4) {
+        grid-column: 4;
+        grid-row: 2;
+      }
+      span:nth-child(5) {
+        grid-column: 1;
+        grid-row: 3;
+      }
+      span:nth-child(6) {
+        grid-column: 2;
+        grid-row: 3;
+      }
+      span:nth-child(7) {
+        grid-column: 3;
+        grid-row: 3;
+      }
+      span:nth-child(8) {
+        grid-column: 4;
+        grid-row: 3;
+      }
+      span:nth-child(9) {
+        grid-column: 2;
+        grid-row: 4;
+      }
+      span:nth-child(10) {
+        grid-column: 3;
+        grid-row: 4;
+      }
+    }
+  }
 </style>

@@ -1,19 +1,19 @@
 ---
 title: Home
 home: true
-heroText: Hero
-tagline: Some tagline
+heroText: Jack Steele
+tagline: I am a developer who does stuff on the interwebs
 actionText: Go To Github
-actionLink: https://github.com/bencodezen/vuepress-blog-boilerplate
+actionLink: https://github.com/jsteele883
 features:
 - 
-    title: Feature 1
+    title: Platform Development
     details: Feature Details
 - 
-    title: Feature 2
+    title: Landing Page Development
     details: Feature Details
 - 
-    title: Feature 3
+    title: Email Development
     details: Feature Details
 footer: This is a footer
 ---
