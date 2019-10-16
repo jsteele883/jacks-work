@@ -33,9 +33,18 @@
     </section>
 </template>
 
-<style scoped>
-    .work-post__image {
+<style scoped lang="scss">
+    .work-post__image-container {
       background: #eaecef;
+      display: block;
+      transition: all ease 0.3s;
+      line-height: 0;
+      .work-post__image {
+        transition: all ease 0.3s;
+      }
+      &:hover .work-post__image {
+        transform: scale(1.125);
+      }
     }
     .blog-post__button {
         margin-bottom: 1.5rem;
@@ -45,6 +54,8 @@
     .blog-post__title {
         margin-top: 0.5rem;
     }
+
+    .work-post__image-container
 
     .work-post__image {
         max-width: 100%;

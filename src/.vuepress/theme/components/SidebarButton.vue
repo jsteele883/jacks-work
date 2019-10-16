@@ -13,9 +13,9 @@
   display none
   width 1.25rem
   height 1.25rem
-  position absolute
+  position fixed
   padding 0.6rem
-  top 0.6rem
+  bottom 0.6rem
   left 1rem
   .icon
     display block

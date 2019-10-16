@@ -4,7 +4,7 @@ date: 2018-10-25 20:47:18
 excerpt: An Email signature builder built in Vue.js to keep employees across the company sending consistent emails
 type: work
 work: true
-preview: /knak-signature-builder.jpg
+preview: /work/knak-email-signature-builder.png
 tags:
     - HTML
     - Vue
@@ -16,7 +16,7 @@ tags:
 I was tasked with finding a way to create a consistent, unified email signature that properly represented our brand, so I set out to develop an email signature generator that would deliver the goods.
 
 Our Former Email Signature was plain, inconsistent and (way too) simple
- 
+
 Knak - Old Email Signature
 
 Our old signature was fairly uninspired. The basic signature was created and shared manually, and it wasn’t consistent across Knak and Revenue Pulse, our two brands. We emphasize the importance of consistent branding to our clients, so we wanted to demonstrate that we’re practicing what we preach.
@@ -24,7 +24,7 @@ Our old signature was fairly uninspired. The basic signature was created and sha
 We also wanted to give each of our employees a clear and simple method for uploading their own signature within brand guidelines, while giving them the freedom to decide which contact fields to include.
 
 ### Design & Refine
- 
+
 
 Email Signature Generator
 
@@ -35,7 +35,7 @@ I built out the emai HTML into a template that could be used in our signature bu
 Once we had a solid prototype in place, we started testing. We hosted the app on AWS so our team could try it out internally across a variety of email clients. As it turns out, Apple Mail makes it difficult to add a signature, so we adjusted the instructions to fit their specifications. Once the app worked smoothly with Outlook, Gmail, Apple Mail, etc, we rolled it out to our entire team.
 
 Final Product: A Consistent Brand
- 
+
 
 
 

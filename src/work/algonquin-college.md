@@ -5,7 +5,7 @@ excerpt: GDPR compliant Preference Center development
 type: work
 work: true
 hero: algonquin-preference-center.png
-preview: //www.revenuepulse.com/wp-content/uploads/2018/10/algonquin-pref-center.jpg
+preview: /work/algonquin-preference-center.png
 tags:
     - HTML
     - CSS

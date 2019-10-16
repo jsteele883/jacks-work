@@ -8,7 +8,7 @@ export default {
         },
         pageSize: {
             type: Number,
-            default: 5
+            default: 10
         },
         startPage: {
             type: Number,
@@ -24,7 +24,7 @@ export default {
     computed: {
         filteredList() {
             if (this.pages) {
-                
+
                 return this.pages.filter(item => {
                     const isWorkPost = !!item.frontmatter.work
                     const isReadyToPublish = new Date(item.frontmatter.date) <= new Date()
@@ -32,7 +32,7 @@ export default {
                     let isCurrentLocale = true;
                     if(this.$site.locales) {
                         const localePath = this.$route.path.split('/')[1] || "";
-                        isCurrentLocale = item.relativePath.startsWith(localePath);   
+                        isCurrentLocale = item.relativePath.startsWith(localePath);
                     }
                     // check if tags contain all of the selected tags
                     const hasTags = !!item.frontmatter.tags && this.selectedTags.every((tag) => item.frontmatter.tags.includes(tag))
@@ -42,13 +42,13 @@ export default {
                     }
 
                     return true
-                    
+
                 }).sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
             }
         },
 
         totalPages() {
-            
+
             return Math.ceil(this.filteredList.length / this.pageSize)
         },
     },
@@ -84,8 +84,8 @@ export default {
 </script>
 
 <template>
-	<div>  
-        <div 
+	<div>
+        <div
             v-if="selectedTags.length > 0"
             class="filtered-heading"
         >
@@ -116,10 +116,10 @@ export default {
         </ul>
 
         <div class="pagination">
-            <button v-show="currentPage > 0" 
+            <button v-show="currentPage > 0"
                 @click="previousPage"
                 class="button--pagination"
-                type="button" 
+                type="button"
             >
                 Previous
             </button>
@@ -134,12 +134,12 @@ export default {
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .work-list {
 	padding: 0;
 	margin: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     grid-column-gap: 20px;
     grid-row-gap: 20px;
 }

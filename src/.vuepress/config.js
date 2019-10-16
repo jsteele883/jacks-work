@@ -18,7 +18,7 @@ module.exports = {
 		],
 		logo: '',
 		docsDir: 'src',
-		pageSize: 5,
+		pageSize: 10,
 		startPage: 0
 	},
 	plugins: [

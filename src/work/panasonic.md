@@ -4,6 +4,7 @@ date: 2018-12-23 20:47:18
 excerpt: A flexible Marketo landing page template, email template and ongoing technical support
 type: work
 work: true
+preview: /work/panasonic-landing-page.png
 tags:
     - HTML
     - CSS
@@ -14,7 +15,7 @@ tags:
 
 ## Panasonic Landing Page Development
 
-Working for Revenue Pulse I have worked with Panasonic Canada team to align their landing page and email output with custom coded templates for Marketo. 
+Working for Revenue Pulse I have worked with Panasonic Canada team to align their landing page and email output with custom coded templates for Marketo.
 
 The landing page template enables them to use web features like modals, video and carousels without having to write any code.
 
