@@ -13,8 +13,6 @@ module.exports = {
 			{ text: 'About', link: '/about/' },
 			{ text: 'Work', link: '/work/' },
 			{ text: 'Blog', link: '/blog/' },
-			{ text: 'Archive', link: '/archive/' },
-			{ text: 'RSS Feed', link: '/rss.xml' }
 		],
 		logo: '',
 		docsDir: 'src',

@@ -18,7 +18,7 @@ export default {
     data() {
         return {
             currentPage: Math.ceil(this.startPage / this.pageSize),
-            selectedTags: []
+            selectedTags: [],
         }
     },
     computed: {
@@ -46,15 +46,19 @@ export default {
                 }).sort((a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date))
             }
         },
-
         totalPages() {
-
             return Math.ceil(this.filteredList.length / this.pageSize)
         },
     },
 
     mounted() {
-        this.currentPage =  Math.min(Math.max(this.currentPage, 0), this.totalPages - 1)
+        this.currentPage =  Math.min(Math.max(this.currentPage, 0), this.totalPages - 1);
+        return this.pages.filter(item => {
+          const isWorkPost = !!item.frontmatter.work
+          const isReadyToPublish = new Date(item.frontmatter.date) <= new Date()
+          let tagsArr = item.rontmatter.tags;
+          console.log(tagsArr);
+        });
     },
 
     methods: {
@@ -107,9 +111,9 @@ export default {
                     v-show="index >= currentPage * pageSize && index < (currentPage + 1) * pageSize"
                     :item="item"
                 />
-                <ul v-for="tag in item.frontmatter.tags" class="work-list__tags">
-                    <li>
-                        <button @click="addTag(tag)">{{ tag }}</button>
+                <ul class="work-list__tags">
+                    <li class="work-list__tag-item" v-for="tag in item.frontmatter.tags">
+                        <button class="work-list__tag-button" @click="addTag(tag)">{{ tag }}</button>
                     </li>
                 </ul>
             </li>
@@ -145,7 +149,42 @@ export default {
 }
 
 .work-list__item {
-	list-style-type: none;
+  list-style: none;
+}
+
+.work-list__tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  .work-list__tag-item {
+    margin: 0 .5em;
+  }
+  .work-list__tag-button {
+    padding-bottom: 5px;
+    -webkit-style: none;
+    color: #121619;
+    padding: .5em;
+    border-radius: 0 4px 4px 0;
+    border: 0;
+    background: rgba(255, 232, 194, 0.3);
+    font-size: 11px;
+    padding: .3em .5em;
+    cursor: pointer;
+    position: relative;
+    &:before {
+    	content:"";
+    	float:left;
+    	position:absolute;
+    	top:0;
+    	left:-10px;
+    	width:0;
+    	height:0;
+    	border-color:transparent rgba(255, 232, 194, 0.3) transparent transparent;
+    	border-style:solid;
+    	border-width:10px 10px 10px 0;
+    	}
+  }
 }
 
 .blog-list__tags {
