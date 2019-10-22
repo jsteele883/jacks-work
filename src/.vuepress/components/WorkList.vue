@@ -53,12 +53,6 @@ export default {
 
     mounted() {
         this.currentPage =  Math.min(Math.max(this.currentPage, 0), this.totalPages - 1);
-        return this.pages.filter(item => {
-          const isWorkPost = !!item.frontmatter.work
-          const isReadyToPublish = new Date(item.frontmatter.date) <= new Date()
-          let tagsArr = item.rontmatter.tags;
-          console.log(tagsArr);
-        });
     },
 
     methods: {
@@ -80,6 +74,9 @@ export default {
         removeTag(tag) {
             this.selectedTags.filter(t => t != tag)
         },
+        removeTag(index){
+          this.selectedTags.splice(index, 1);
+        },
         resetTags(){
             this.selectedTags = []
         }
@@ -93,9 +90,7 @@ export default {
             v-if="selectedTags.length > 0"
             class="filtered-heading"
         >
-            <h2>
-                Filtered by {{ selectedTags.join(',') }}
-            </h2>
+            <h2>Filters</h2>
             <button
                 type="button"
                 @click="resetTags"
@@ -103,6 +98,9 @@ export default {
             >
                 Clear filter
             </button>
+            <ul class="filter-list">
+              <li class="filter-list__item" v-for="(selectedTag, index) in selectedTags">{{ selectedTag }} <button class="filter-list__item-button" type="button" @click="removeTag(index)">✕</button></li>
+            </ul>
         </div>
         <ul class="work-list">
             <li v-for="(item, index) in filteredList"
@@ -150,6 +148,35 @@ export default {
 
 .work-list__item {
   list-style: none;
+}
+
+.filter-list {
+  list-style: none;
+  display: flex;
+  align-items: flex-end;
+  padding-left: 0;
+  .filter-list__item {
+    color: #fff;
+    padding: 0 2.5em 0 1em;
+    border-radius: 27px;
+    background: #084C61;
+    position: relative;
+    margin-right: 1em;    
+    .filter-list__item-button {
+      position: absolute;
+      color: #084C61;
+      background: #fff;
+      border-radius: 100%;
+      -webkit-appearance: none;
+      border: 0;
+      width: 20px;
+      height: 20px;
+      font-size: 10px;
+      right: 3.5px;
+      top: 3.5px;
+      cursor: pointer;
+    }
+  }
 }
 
 .work-list__tags {
@@ -216,7 +243,8 @@ export default {
 }
 
 .filtered-heading {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .pagination {
