@@ -91,15 +91,16 @@ export default {
             class="filtered-heading"
         >
             <h2>Filters</h2>
-            <button
-                type="button"
-                @click="resetTags"
-                class="btn clear-filter-btn"
-            >
-                Clear filter
-            </button>
             <ul class="filter-list">
               <li class="filter-list__item" v-for="(selectedTag, index) in selectedTags">{{ selectedTag }} <button class="filter-list__item-button" type="button" @click="removeTag(index)">✕</button></li>
+              <li class="filter-list__item filter-list__item--all-filters">
+                Clear filters
+                <button
+                  type="button"
+                  @click="resetTags"
+                  class="btn filter-list__item-button"
+              >✕</button>
+              </li>
             </ul>
         </div>
         <ul class="work-list">
@@ -161,7 +162,7 @@ export default {
     border-radius: 27px;
     background: #084C61;
     position: relative;
-    margin-right: 1em;    
+    margin-right: 1em;
     .filter-list__item-button {
       position: absolute;
       color: #084C61;
@@ -175,7 +176,16 @@ export default {
       right: 3.5px;
       top: 3.5px;
       cursor: pointer;
+      transition: all 0.3s ease;
+      &:hover {
+        font-size: 11px;
+        font-weight: bold;
+      }
     }
+  }
+  .filter-list__item--all-filters {
+    background: rgba(255, 232, 194, 1);
+    color: #121619;
   }
 }
 
@@ -240,11 +250,6 @@ export default {
 .clear-filter-btn {
     align-self: center;
     margin-left: 20px;
-}
-
-.filtered-heading {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
 }
 
 .pagination {
