@@ -30,14 +30,15 @@ Email Signature Generator
 
 To get started, our graphic designer developed a few mockups using Sketch. Once our management team had narrowed it down to a few top choices, we solidified the fields we wanted to include. I then built the user interface around those fields. I included a variety of fields, like LinkedIn, Calendly, and Twitter, but made most of them optional so our employees can include only what they want to share.
 
-I built out the emai HTML into a template that could be used in our signature builder app and developed the signature builder using Vue.js. As the employee fills out the form, the values populate the corresponding variable field in the signature, and column width automatically adjusts based on the number of characters in the field.
+I built out the email HTML into a template that could be used in our signature builder app and developed the signature builder using Vue.js. As the employee fills out the form, the values populate the corresponding variable field in the signature, and column width automatically adjusts based on the number of characters in the field.
+
+<img src="/work/signature-builder-signature-preview.png" alt="Signature Preview" style="width:480px;max-width:100%;"/>
 
 Once we had a solid prototype in place, we started testing. We hosted the app on AWS so our team could try it out internally across a variety of email clients. As it turns out, Apple Mail makes it difficult to add a signature, so we adjusted the instructions to fit their specifications. Once the app worked smoothly with Outlook, Gmail, Apple Mail, etc, we rolled it out to our entire team.
 
-Final Product: A Consistent Brand
+<img src="/work/signature-builder-instructions.png" alt="Signature Instructions" style="width:480px;max-width:100%;"/>
 
-
-
+### Final Product: A Consistent Brand
 
 Now, our signatures are consistent and professional across our entire brand. Signatures are set up during the onboarding process, and any updates to our branding are easily shared with the whole team through the app – no individual updates required.
 
