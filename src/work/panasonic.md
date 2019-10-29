@@ -15,15 +15,22 @@ tags:
 
 ## Panasonic Landing Page Development
 
-Working for Revenue Pulse I have worked with Panasonic Canada team to align their landing page and email output with custom coded templates for Marketo.
+Working for Revenue Pulse I have worked with Panasonic Canada team to align their landing page and email output with custom coded templates for Marketo. I also help them with the style and functionality of their Marketo forms on their website.
 
-The landing page template enables them to use web features like modals, video and carousels without having to write any code.
+The landing page template enables them to use web features like modals, video and carousels without having to write any code. This module for example allows them to display multiple product videos each with a customizable modal that their Marketers can embed within Marketo without writing any code.
 
-Here is some feedback I received on the ongoing project:
+<img src="/work/panasonic-modals.png" alt="Modals Example" style="width:800px;max-width:100%;margin:0 auto;"/>
+
+The email template is very flexible and can be customized to meet the marketers needs with dynamic content throughout while preventing them from going off brand.
+
+Here is some feedback I received from our main contact on the ongoing project:
 
 > I just wanted to say a few things in regards to Jack.
+>
 > As you know, I’ve been using Marketo for about a year now and to streamline our processes here at Panasonic, we decided to have universal branding between our Consumer and Business emails as well as, our Landing Pages.
-> To achieve this, we turned to Revenue Pulse to help us with our template building. We were given Jack, one of your template developers to be our point person for all of our template needs.
-> In the last year, he has been THE best developer I’ve ever worked with and I’ve been in the working world for a very long time—yes I’m old!  :monkey_face:
+To achieve this, we turned to Revenue Pulse to help us with our template building. We were given Jack, one of your template developers to be our point person for all of our template needs.
+In the last year, he has been THE best developer I’ve ever worked with and I’ve been in the working world for a very long time—yes I’m old!  :monkey_face:
+>
 > In all seriousness though, every issue I had, every question, any request, etc. Jack was the ultimate gentleman. He not only delivered, he exceeded my expectations. And even now, after the project is finished, he’s made numerous fixes and additions we’d requested over the last few months--always timely and friendly, and on point.
-> So, in my opinion, Revenue Pulse is very lucky to have Jack on their team!
+>
+>So, in my opinion, Revenue Pulse is very lucky to have Jack on their team!

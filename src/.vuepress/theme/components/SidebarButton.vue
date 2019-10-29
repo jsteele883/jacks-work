@@ -14,9 +14,13 @@
   width 1.25rem
   height 1.25rem
   position fixed
-  padding 0.6rem
-  bottom 0.6rem
-  left 1rem
+  padding 2rem 2em 1em 1em
+  bottom 0
+  left 0
+  background $accentColor
+  border-radius 0 100% 0 0
+  color #fff
+  cursor pointer
   .icon
     display block
     width 1.25rem

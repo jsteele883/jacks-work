@@ -92,11 +92,22 @@ kbd
   padding 0 0.15em
 
 blockquote
-  font-size 1.2rem
   color #999
-  border-left .25rem solid #dfe2e5
   margin-left 0
+  margin-top 3rem
   padding-left 1rem
+  border-right 2px solid rgba(255, 232, 194, 0.3)
+  position relative
+  &:before
+   content '“'
+   font-size 10em
+   font-family 'DM Serif Text', serif
+   color rgba(255, 232, 194, 0.3)
+   line-height 1
+   position absolute
+   top -3rem
+   left -1rem
+
 
 ul, ol
   padding-left 1.2em

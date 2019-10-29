@@ -29,15 +29,14 @@
         </router-link>
         <h3 class="blog-post__title">{{ item.frontmatter.title }}</h3>
         <p v-if="item.frontmatter.excerpt">{{ item.frontmatter.excerpt }}</p>
-        <router-link class="button blog-post__button" :to="item.path">More Details ></router-link>
     </section>
 </template>
 
 <style scoped lang="scss">
     .work-post__image-container {
-      background: #eaecef;
+      background-color: #eaecef;
       display: block;
-      transition: all ease 0.3s;
+      transition: all ease 0.6s;
       line-height: 0;
       .work-post__image {
         transition: all ease 0.3s;
