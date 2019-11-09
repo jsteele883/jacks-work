@@ -81,8 +81,8 @@ export default {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
-        } 
-        
+        }
+
         return `${dateFormat.toLocaleDateString(this.$lang, options)}, ${dateFormat.toLocaleTimeString(this.$lang)}`
       }
     },
@@ -156,8 +156,8 @@ export default {
             year: 'numeric',
             month: 'long',
             day: 'numeric'
-        } 
-        
+        }
+
         return dateFormat.toLocaleDateString(this.$lang, options)
     }
   },
@@ -224,6 +224,7 @@ function find (page, items, offset) {
 
 .blog {
   @extend $wrapper
+  padding-left $sidebarWidth
 }
 
 .blog__header {
