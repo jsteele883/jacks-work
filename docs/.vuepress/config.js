@@ -1,15 +1,15 @@
 module.exports = {
-	title: 'VuePress Blog Boilerplate',
+	title: 'VuePress Jacks Work',
 	dest: './public',
 	themeConfig: {
-		repo: 'https://github.com/bencodezen/vuepress-blog-boilerplate',
+		repo: 'https://github.com/jsteele883/jacks-work',
 		repoLabel: 'Repo',
 		docsDir: 'src',
 		editLinks: true,
 		logo: '/vuepress-blog-logo.png',
 		editLinkText: 'Found a bug? Help me improve this page!',
 		nav: [
-			{ text: 'Home', link: '/' }, 
+			{ text: 'Home', link: '/' },
 			{ text: 'Learn', link: '/learn/' }
 		],
 		version: '0.11.0-beta'
@@ -25,7 +25,7 @@ module.exports = {
 			'vuepress-plugin-rss',
 			{
 				base_url: '/',
-				site_url: 'https://www.bencodezen.io',
+				site_url: 'https://www.jackswork.me',
 				filter: frontmatter => frontmatter.date <= new Date(),
 				count: 20
 			}

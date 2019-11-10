@@ -1,6 +1,6 @@
 ---
 title: Building My Portfolio
-date: 2018-11-03 20:47:18
+date: 2019-11-08 20:47:18
 excerpt: Deciding on a solution for easily sharing and keeping a record of my work.
 type: post
 blog: true
@@ -31,3 +31,25 @@ Very Simple... but it gave me enough to start creating my grid composition witho
 ### Step 2: Concepting
 
 I started concepting how this layout might translate to code by using CodePen. I created multiple pens to cover a range of different views. Colour palettes and typography are something that I struggle to visualize prior to having a layout in place so I kept things very simple to begin with:
+
+<div style="text-align:center"><img src="/blog/simple-portfolio-codepen.png" alt="Blog Design" style="width:800px;max-width:100%;"/></div>
+
+I used CSS grid to experiment with ideas based on what I had in Sketch.
+
+<div style="text-align:center"><img src="/blog/colours-portfolio-codepen.png" alt="Colours Design" style="width:800px;max-width:100%;"/></div>
+
+I like using SASS variables in Codepen to experiment with different colour palette options. I combined this with using [Coloors.co](https://coolors.co/) for inspiration. This allowed me to try out different palettes very easily by exporting SASS variables and just copying them into my Codepen to get an idea of how colours might work together.
+
+<div style="text-align:center"><img src="/blog/sass-variables.png" alt="SASS Variables" style="width:400px;max-width:100%;"/></div>
+
+Once I had a concept that I was happy with I was excited to start deciding on a technical solution.
+
+### Step 3: Coding
+
+For a long time I had been thinking that a simple CMS solution would be good to make it easy for me to update recent projects and style them accordingly. For this project I decided that a serverless app could be easier to manage. I also wanted to use Vue.js to code out the front end components. [Vuepress](https://vuepress.vuejs.org/) provides a pretty ideal custom solution for serving up Markdown files within Vue Components. Vue is a pleasure to work with and Markdown is super easy to update with new projects.
+
+Over the past few weeks I have been adding projects and functionality to this site and intend to keep it up to date as a work in progress side project.
+
+### Step 4: Hosting
+
+For hosting and deployments I used [Netflify](https://www.netlify.com/) linked to my Github repo. This literally took 10 minutes to set up and allows me to easily deploy updates when I push to my repo. 

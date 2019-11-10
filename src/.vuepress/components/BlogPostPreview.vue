@@ -14,7 +14,7 @@ export default {
                 year: 'numeric',
                 month: 'long',
                 day: 'numeric'
-            } 
+            }
 
             return dateFormat.toLocaleDateString('en-US', options)
         }
@@ -32,7 +32,7 @@ export default {
     </section>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .blog-post__button {
 	margin-bottom: 1.5rem;
 	display: inline-block;
@@ -43,15 +43,19 @@ export default {
 }
 
 .button {
-	border: 1px solid #32c8cf;
 	border-radius: 4px;
-	color: #32c8cf;
+	color: #fff;
+  background: #e79871;
 	font-size: 0.8rem;
 	padding: 0.5rem 0.75rem;
 	text-transform: uppercase;
 	font-weight: 700;
 	box-shadow: 0 0;
 	transition: background-color 0.2s ease-in, color 0.2s ease-in;
+  &:hover {
+    text-decoration: none;
+    background: #e89a74;
+  }
 }
 
 .tag-list {
